@@ -12,11 +12,11 @@
 
 		base_layer {
 				// ----------------------------------------------------------------------------------------------
-				// | ESC  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | BKSP | MUTE	|
+				// | ESC  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | BKSP | MUTE	       |
 				// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |      | CTL+ALT+DEL |
-				// | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |   ENTER   | CTL+SHIFT |
-				// |SHIFT| \ |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |  SHIFT | UP   | DEL |
-				// |  CTL  |  1  |  ALT  |            SPACE               | ALT | WIN  |  CTL |LEFT|DOWN| RIGHT|
+				// | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |   ENTER   | CTL+SHIFT   |
+				// |SHIFT| \ |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /  |  SHIFT   |   U   |  DEL      |
+				// |  CTL  |  1  |  ALT  |            SPACE               | ALT | WIN  | CTL |  L  |   D   |   R       |
 				// ---------------------------------------------------------------------------------------------
 			bindings = <
 
@@ -30,11 +30,11 @@
 		};
 		raise {
 			bindings = <
-				&kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9   &kp F10  &kp F11 &kp F12 &bl BL_TOG &rgb_ug RGB_TOG
-				&trans &trans &trans &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK  &rgb_ug RGB_HUI
-				&trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp HOME  &kp PG_UP &sys_reset  &bootloader &rgb_ug RGB_HUD
-				&kp C_PREV &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans &trans &kp C_MUTE &trans &kp END &kp PG_DN  &kp C_NEXT &trans &bl BL_INC
-				&trans   &trans   &trans              &trans                            &trans   &trans   &trans &bt BT_CLR &trans &bl BL_DEC
+				&kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9   &kp F10  &kp F11 &kp F12 &bl BL_TOG 	 &rgb_ug RGB_TOG
+				&trans &trans &trans &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK  		 &rgb_ug RGB_HUI
+				&trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp HOME  &kp PG_UP &sys_reset  &bootloader 	 &rgb_ug RGB_HUD
+				&kp C_PREV &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans &trans &kp C_MUTE &trans &kp END &kp PG_DN &kp C_NEXT &trans &bl BL_INC
+				&trans   &trans   &trans                &trans                            &trans   &trans  &trans   &bt BT_CLR 	 &trans	 &bl BL_DEC
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 		};
