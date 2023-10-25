@@ -1,6 +1,6 @@
 {
   "keyboard": "bt65",
-  "keymap": "default",
+  "keymap": "BASE",
   "layout": "LAYOUT",
   "layer_names": [
     "base",
