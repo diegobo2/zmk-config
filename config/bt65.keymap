@@ -83,18 +83,7 @@
                 &kp C_PREV &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans &trans &kp C_MUTE &trans &kp END &kp PG_DN &kp C_NEXT &trans &bl BL_INC
                 &trans   &trans   &trans                &trans                            &trans   &trans  &trans   &bt BT_CLR 	 &trans	  &bl BL_DEC
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &alt_tab>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_MEDIA_PREV C_MEDIA_NEXT>;
         };
-	encoders {
-        	compatible = "zmk,encoders";
-        	encoder_1 {
-            		status = "okay";
-            		bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        	};
-		encoder_2 {
-            		status = "okay";
-            		bindings = <&inc_dec_kp C_MEDIA_PREV C_MEDIA_NEXT>;
-        	};
-	};
     };
 };
