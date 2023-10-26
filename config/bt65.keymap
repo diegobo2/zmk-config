@@ -19,8 +19,8 @@
 	        , <&macro_release &kp RALT>
 	        , <&macro_release &kp DEL>
 	        ;
-            };
-	    clt_shift: clt_shift {
+        };
+	clt_shift: clt_shift {
 	    label = "clt_shift";
             compatible = "zmk,behavior-macro";
 	    #binding-cells = <1>;
@@ -28,7 +28,7 @@
 	        = <&macro_tap &kp CLT>
                 , <&macro_tap &kp RSHFT>
 	        ;
-	   };
+	};
     };
 };
 
