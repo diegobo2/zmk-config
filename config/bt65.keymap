@@ -93,7 +93,7 @@
         	};
 		encoder_2 {
             		status = "okay";
-            		bindings = <&inc_dec_kp C_MEDIA_NEXT C_MEDIA_PREV>;
+            		bindings = <&inc_dec_kp C_MEDIA_PREV C_MEDIA_NEXT>;
         	};
 	};
     };
