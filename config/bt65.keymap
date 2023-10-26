@@ -42,7 +42,7 @@
 	macros {
  	    clt_alt_del: clt_alt_del {
             	label = "clt_alt_del";
-            	compatible = "zmk,behavior-macro";
+            	compatible = "zmk,behavior-macro-clt-alt-del";
             	#binding-cells = <0>;
             	bindings
                 	= <&macro_press &kp CLT>
@@ -55,7 +55,7 @@
         	};
 	    clt_shift: clt_shift {
             	label = "clt_shift";
-            	compatible = "zmk,behavior-macro";
+            	compatible = "zmk,behavior-macro-clt-shift";
             	#binding-cells = <1>;
             	bindings
                 	= <&macro_tap &kp CLT>
