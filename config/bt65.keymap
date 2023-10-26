@@ -56,7 +56,7 @@
 	    clt_shift: clt_shift {
             	label = "clt_shift";
             	compatible = "zmk,behavior-macro";
-            	#binding-cells = <0>;
+            	#binding-cells = <1>;
             	bindings
                 	= <&macro_tap &kp CLT>
                 	, <&macro_tap &kp RSHFT>
