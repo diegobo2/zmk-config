@@ -6,30 +6,30 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-	macros {
-	 	clt_alt_del: clt_alt_del {
-	       	label = "clt_alt_del";
-	       	compatible = "zmk,behavior-macro";
-	       	#binding-cells = <0>;
-	       	bindings 
-	       		= <&macro_press &kp CLT>
-	           	, <&macro_press &kp RALT>
-	           	, <&macro_press &kp DEL>
-			, <&macro_release &kp CLT>
-	           	, <&macro_release &kp RALT>
-	           	, <&macro_release &kp DEL>
-	           	;
-	   	};
-		clt_shift: clt_shift {
-	       	label = "clt_shift";
-	       	compatible = "zmk,behavior-macro";
-	       	#binding-cells = <1>;
-	       	bindings 
-	       		= <&macro_tap &kp CLT>
-	           	, <&macro_tap &kp RSHFT>
-	           	;
-	   	};
-	};
+    macros {
+        clt_alt_del: clt_alt_del {
+	    label = "clt_alt_del";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings 
+		= <&macro_press &kp CLT>
+	        , <&macro_press &kp RALT>
+	        , <&macro_press &kp DEL>
+		, <&macro_release &kp CLT>
+	        , <&macro_release &kp RALT>
+	        , <&macro_release &kp DEL>
+	        ;
+            };
+	    clt_shift: clt_shift {
+	    label = "clt_shift";
+            compatible = "zmk,behavior-macro";
+	    #binding-cells = <1>;
+	    bindings 
+	        = <&macro_tap &kp CLT>
+                , <&macro_tap &kp RSHFT>
+	        ;
+	   };
+    };
 };
 
 / {
