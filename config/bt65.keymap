@@ -11,10 +11,11 @@
 	        label = "clt_alt_del";
 	        compatible = "zmk,behavior-macro";
 	        #binding-cells = <0>;
-	        bindings = <&macro_press &kp CLT>
+	        bindings 
+                    = <&macro_press &kp RCTRL>
 	            , <&macro_press &kp RALT>
 	            , <&macro_press &kp DEL>
-		        , <&macro_release &kp CLT>
+		        , <&macro_release &kp RCTRL>
 	            , <&macro_release &kp RALT>
 	            , <&macro_release &kp DEL>
 	            ;
@@ -23,8 +24,9 @@
 	        label = "clt_shift";
             compatible = "zmk,behavior-macro";
 	        #binding-cells = <1>;
-	        bindings = <&macro_tap &kp CLT>
-                , <&macro_tap &kp RSHFT>
+	        bindings 
+                    = <&macro_tap &kp RCTRL>
+                    , <&macro_tap &kp RSHFT>
 	            ;
 	    };
     };
