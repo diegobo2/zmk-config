@@ -10,7 +10,7 @@
         clt_alt_del: clt_alt_del {
 	        label = "clt_alt_del";
 	        compatible = "zmk,behavior-macro";
-	        #binding-cells = <3>;
+	        #binding-cells = <1>;
 	        bindings 
                     = <&macro_press &kp RCTRL>
 	            , <&macro_press &kp RALT>
