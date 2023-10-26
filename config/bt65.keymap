@@ -20,26 +20,26 @@
 	            , <&macro_release &kp DEL>
 	            ;
         };
-	    clt_shift: clt_shift {
+	clt_shift: clt_shift {
 	        label = "clt_shift";
-            compatible = "zmk,behavior-macro";
+                compatible = "zmk,behavior-macro";
 	        #binding-cells = <0>;
 	        bindings 
-                = <&macro_press &kp RCTRL>
-                , <&macro_press &kp RSHFT>
-                , <&macro_release &kp RCTRL>
-                , <&macro_release &kp RSHFT>
+                    = <&macro_press &kp RCTRL>
+                    , <&macro_press &kp RSHFT>
+                    , <&macro_release &kp RCTRL>
+                    , <&macro_release &kp RSHFT>
 	            ;
-	    };
+	};
         alt_tab: alt_tab {
-	        label = "alt_tab";
-            compatible = "zmk,behavior-macro";
+		label = "alt_tab";
+            	compatible = "zmk,behavior-macro";
 	        #binding-cells = <0>;
 	        bindings 
-                = <&macro_tap &kp LALT>
-                , <&macro_tap &kp TAB>
+                    = <&macro_tap &kp LALT>
+                    , <&macro_tap &kp TAB>
 	            ;
-	    };
+	};
     };
 };
 
