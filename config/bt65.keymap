@@ -16,18 +16,17 @@
                 , <&macro_release &kp LCTRL &kp LALT>
                 ;
         };
-        alt_tabulador: alt_tabulador {
-		label = "alt_tabulador";
-            	compatible = "zmk,behavior-macro";
-	        #binding-cells = <0>;
-	        bindings 
-			= <&macro_press &kp LALT &kp TAB>
-			, <&macro_release &kp LALT &kp TAB>
-			;
-	    };
     };
 
     keymap {
+	behaviors {
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "RGB_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+            };
+    	};
         compatible = "zmk,keymap";
         default_layer {
             // ╭─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬───────┬────────────╮
@@ -58,7 +57,7 @@
                 &bt BT_CLR  &kp C_PREV      &bt BT_PRV      &bt BT_NXT      &trans &trans &trans &trans &trans &trans &trans  &trans  &trans     &trans      &trans
                 &mo RCTRL   &trans          &kp RALT        &trans          &trans &trans &trans                                      &trans     &trans      &trans
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &rgb_encoder>;
         };
     };
 };
