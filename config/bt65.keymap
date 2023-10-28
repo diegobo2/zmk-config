@@ -11,13 +11,19 @@
 	        label = "clt_alt_del";
 	        compatible = "zmk,behavior-macro";
 	        #binding-cells = <0>;
-	        bindings = <&macro_tap &kp RCTRL &kp RALT &kp DEL>;
+	        bindings = <&macro_press &kp LCTRL &kp LALT>
+                , <&macro_tap &kp DEL>
+                , <&macro_release &kp LCTRL &kp LALT>
+                ;
         };
         alt_tabulador: alt_tabulador {
 		label = "alt_tabulador";
             	compatible = "zmk,behavior-macro";
 	        #binding-cells = <0>;
-	        bindings = <&macro_tap &kp LALT &kp TAB>;
+	        bindings 
+			= <&macro_press &kp LALT &kp TAB>
+			, <&macro_release &kp LALT &kp TAB>
+			;
 	    };
     };
 
