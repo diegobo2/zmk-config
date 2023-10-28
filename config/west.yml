@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zares8
+      url-base: https://github.com/Zares8
   projects:
     - name: zmk
       remote: zmkfirmware
