@@ -20,9 +20,7 @@
 	        bindings = <&macro_tap &kp LALT &kp TAB>;
 	    };
     };
-};
 
-/ {
     keymap {
         compatible = "zmk,keymap";
         default_layer {
