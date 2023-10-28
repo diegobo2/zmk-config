@@ -73,7 +73,7 @@
                 &kp LSHFT &kp NON_US_BSLH &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH   &kp RSHFT &kp UP  
                 &mo 1  &kp LGUI  &kp LALT   		      &kp LCTRL           &kp SPACE        &kp LGUI &kp RCTRL &kp LEFT &kp DOWN       &kp RIGHT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_MEDIA_PREV C_MEDIA_NEXT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &rgb_encoder>;
         };
         raise {
             bindings = <
@@ -83,7 +83,7 @@
                 &kp C_PREV &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans &trans &kp C_MUTE &trans &kp END &kp PG_DN &kp C_NEXT &trans &bl BL_INC
                 &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD           &trans     &trans   &trans  &trans   &bt BT_CLR 	 &trans	  &bl BL_DEC
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &rgb_encoder>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
