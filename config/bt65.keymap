@@ -21,6 +21,12 @@
 	     #sensor-binding-cells = <0>;
 	     bindings = <&bl BL_DEC>, <&bl BL_INC>;
          };
+	 rgb_encoder: bl_encoder {
+	     compatible = "zmk,behavior-sensor-rotate";
+	     label = "RGB_ENCODER";
+	     #sensor-binding-cells = <0>;
+	     bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+         };
    };
     
     keymap {
@@ -38,33 +44,33 @@
             // | CTRL | WIN  |  ALT |                SPACE               | ALT  | CTRL |CLICK |LEFT | DOWN |RIGHT |
             // ╰──────┴──────┴──────┴────────────────────────────────────┴──────┴──────┴──────┴─────┴──────┴──────╯
             bindings = <
-                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &kp BSPC  &kp LG(SPACE)
+                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &kp BSPC  &none
 		&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp RBKT  &kp DEL
 		&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT  &kp NON_US_HASH  &kp RET  &kp LG(LS(S))
-		&kp LSHFT  &kp NON_US_BSLH  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT  &kp KP_N8  &kp KP_SLASH
+		&kp LSHFT  &kp NON_US_BSLH  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT  &kp KP_N8  &kp KP_MINUS
 		&kp LCTRL  &kp LGUI  &kp LALT           &lt 1 SPACE          &kp RALT  &lt 2 RCTRL &kp KP_N5  &kp KP_N4  &kp KP_N2  &kp KP_N6
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 	lower {
             bindings = <  
-                &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL  &kp C_NEXT
+                &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL  &none
 		&none  &kp HOME  &kp UP  &kp END  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BSPC
 		&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset  &kp KP_NUM  &kp LG(L)
-		&kp LSHFT  &none  &none  &none  &none  &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT  &none  &kp KP_PLUS  &kp KP_N8  &kp KP_MINUS
-		&kp LCTRL  &kp LGUI  &kp LALT            &none                     &kp KP_DOT  &kp KP_N0  &kp KP_N5  &kp KP_N4 &kp KP_N2  &kp KP_N6
+		&kp LSHFT  &none  &none  &none  &none  &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT  &none  &kp KP_PLUS  &kp KP_N8  &kp LG(SPACE)
+		&kp LCTRL  &kp LGUI  &kp LALT            &none                     &kp RALT  &lt RCTRL  &kp KP_N5  &kp KP_N4 &kp KP_N2  &kp KP_N6
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &bl_encoder>;
+            sensor-bindings = <&rgb_encoder &bl_encoder>;
         };
         raise {
             bindings = <  
-                &none  &none  &none  &none  &none  &none  &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &bl BL_INC  &bl BL_DEC  &bl BL_TOG  &kp C_PREV
-		&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+		&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &bl BL_TOG
 		&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset &bootloader  &none
-		&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+		&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &rgb_ug RGB_TOG
 		&bt BT_CLR  &bt BT_PRV  &bt BT_NXT        &none                &none  &none  &none  &none  &none  &none
             >;
-            sensor-bindings = <&bl_encoder &bl_encoder>;
+            sensor-bindings = <&rgb_encoder &bl_encoder>;
         };
     };
 };
