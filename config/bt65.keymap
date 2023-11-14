@@ -51,8 +51,8 @@
                 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL  &kp C_NEXT
 		&none  &kp HOME  &kp UP  &kp END  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BSPC
 		&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset  KP_NUM  &kp LG(L)
-		&kp LSHFT  &none  &none  &none  &none  &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT  &none  &kp KP_PLUS  &kp KP_ASTERISK  &kp KP_MINUS
-		&kp RCTRL  &kp LGUI  &kp LALT            &none                      &kp KP_DOT  &kp KP_N0  &kp KP_N5  &kp KP_N4 &kp KP_N2  &kp KP_N6
+		&kp LSHFT  &none  &none  &none  &none  &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT  &none  &kp KP_PLUS  &kp KP_N8  &kp KP_MINUS
+		&kp RCTRL  &kp LGUI  &kp LALT            &none                     &kp KP_DOT  &kp KP_N0  &kp KP_N5   &kp KP_N4 &kp KP_N2  &kp KP_N6
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &bl_encoder>;
         };
