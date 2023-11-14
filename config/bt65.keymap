@@ -16,12 +16,13 @@
 
     behaviors {
 	 bl_encoder: bl_encoder {
-	 compatible = "zmk,behavior-sensor-rotate";
-	 label = "BL_ENCODER";
-	 #sensor-binding-cells = <0>;
-	 bindings = <&bl BL_DEC>, <&bl BL_INC>;
-    };
-
+	     compatible = "zmk,behavior-sensor-rotate";
+	     label = "BL_ENCODER";
+	     #sensor-binding-cells = <0>;
+	     bindings = <&bl BL_DEC>, <&bl BL_INC>;
+         };
+   };
+    
     keymap {
         compatible = "zmk,keymap";
         default_layer {
