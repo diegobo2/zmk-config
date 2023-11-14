@@ -13,17 +13,6 @@
 };
 
 / {
-    macros {
-        clt_alt_del: clt_alt_del {
-	        label = "clt_alt_del";
-	        compatible = "zmk,behavior-macro";
-	        #binding-cells = <0>;
-	        bindings = <&macro_tap &kp RCTRL &kp RALT &kp DEL>;
-        };
-    };
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -49,7 +38,7 @@
         };
 	lower {
             bindings = <  
-                &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL  &win_l
+                &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL  &kp C_NEXT
 		&none  &kp HOME  &kp UP  &kp END  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BSPC
 		&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset  &bootloader  &kp LG(LS(S))
 		&kp LSHFT  &none  &none  &none  &none  &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT  &none  &kp HOME  &kp UP  &kp END
