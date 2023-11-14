@@ -24,7 +24,7 @@
 	 rgb_encoder: rgb_encoder {
 	     compatible = "zmk,behavior-sensor-rotate";
 	     label = "RGB_ENCODER";
-	     #sensor-binding-cells = <0>;
+	     #sensor-binding-cells = <1>;
 	     bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
          };
    };
