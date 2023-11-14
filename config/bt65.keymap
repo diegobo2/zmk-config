@@ -21,7 +21,7 @@
 	     #sensor-binding-cells = <0>;
 	     bindings = <&bl BL_DEC>, <&bl BL_INC>;
          };
-	 rgb_encoder: bl_encoder {
+	 rgb_encoder: rgb_encoder {
 	     compatible = "zmk,behavior-sensor-rotate";
 	     label = "RGB_ENCODER";
 	     #sensor-binding-cells = <0>;
